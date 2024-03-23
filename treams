@@ -1,0 +1,37 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class treams {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("WebDriver.chrome.driver","C:\\Users\\kutty\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://treamstechnology.in/contact/");
+		driver.manage().window().maximize();
+		
+		Thread.sleep(3000);
+		WebElement firstname= driver.findElement(By.xpath("//*[@id=\"wpcf7-f7616-p10851-o1\"]/form/div[2]/div[1]/p/span/input"));
+		firstname.sendKeys("Kali");
+		WebElement lastname=driver.findElement(By.xpath("//*[@id=\"wpcf7-f7616-p10851-o1\"]/form/div[2]/div[2]/p/span/input"));
+		lastname.sendKeys("Doss");
+		WebElement email=driver.findElement(By.xpath("//*[@id=\"wpcf7-f7616-p10851-o1\"]/form/p[1]/span/input"));
+		email.sendKeys("kuttyraj20@gmail.com");
+		WebElement mobilenumber=driver.findElement(By.xpath("//*[@id=\"wpcf7-f7616-p10851-o1\"]/form/p[2]/span/input"));
+		mobilenumber.sendKeys("9597254087");
+		WebElement msgbox=driver.findElement(By.xpath("//*[@id=\"wpcf7-f7616-p10851-o1\"]/form/p[3]/span/textarea"));
+		msgbox.sendKeys("hi testing coures avaliable");
+	
+		Thread.sleep(4000);
+		 WebElement element = driver.findElement(By.xpath("//*[@id=\"wpcf7-f7616-p10851-o1\"]/form/p[4]/input"));
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].click();", element);
+	        
+	        JavascriptExecutor scroll= (JavascriptExecutor) driver;
+	        scroll.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		
+	}
+
+}
