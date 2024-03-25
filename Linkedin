@@ -1,0 +1,30 @@
+package my;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class linkedin {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\kutty\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		WebDriver dass=new ChromeDriver();
+		dass.get("https://www.linkedin.com/login");
+		dass.findElement(By.id("username")).sendKeys("kuttyraj20@gmail.com");
+		dass.findElement(By.id("password")).sendKeys("Dass@9597");
+		dass.findElement(By.xpath("//*[@id=\"organic-div\"]/form/div[3]/button")).click();
+		String papa=dass.getCurrentUrl();
+		if(papa.equals("https://www.linkedin.com/home"))
+		{
+			System.out.println("Test Case Pass");
+		}
+		else
+		{
+			System.out.println("Test Case Fali");
+		}
+		dass.close();
+
+	}
+
+}
