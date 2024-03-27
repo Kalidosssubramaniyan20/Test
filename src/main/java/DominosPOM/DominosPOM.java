@@ -281,7 +281,57 @@ public class DominosPOM {
 		this.pepsiminus = pepsiminus;
 	}
 	
+	@FindBy(xpath="//span[@data-label='Sub Total']")
+	private WebElement subtotal;
 	
+	@FindBy(xpath="//span[@data-label='Discount']")
+	private WebElement Discount;
+	
+	@FindBy(xpath="//span[@data-label='Taxes and Charges']")
+	private WebElement taxes;
+	
+	@FindBy(xpath="//span[@data-label='Grand Total']")
+	private WebElement grandtotal;
+
+	public WebElement getSubtotal() {
+		return subtotal;
+	}
+
+	public void setSubtotal(WebElement subtotal) {
+		this.subtotal = subtotal;
+	}
+
+	public WebElement getDiscount() {
+		return Discount;
+	}
+
+	public void setDiscount(WebElement discount) {
+		Discount = discount;
+	}
+
+	public WebElement getTaxes() {
+		return taxes;
+	}
+
+	public void setTaxes(WebElement taxes) {
+		this.taxes = taxes;
+	}
+
+	public WebElement getGrandtotal() {
+		return grandtotal;
+	}
+
+	public void setGrandtotal(WebElement grandtotal) {
+		this.grandtotal = grandtotal;
+	}
+
+	public void setAddbtnpaneerpizza(WebElement addbtnpaneerpizza) {
+		this.addbtnpaneerpizza = addbtnpaneerpizza;
+	}
+
+	public void setMarghrita(WebElement marghrita) {
+		this.marghrita = marghrita;
+	}
 	
 
 }

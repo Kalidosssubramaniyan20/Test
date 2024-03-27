@@ -2,6 +2,7 @@ package DominosStep;
 
 import javax.swing.Action;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -103,6 +104,9 @@ public class DominosStepdef extends DominosBaseclass{
 			Thread.sleep(2000);
 			click(ob5.getPepsiminus());
 		}
+		
+		
+		
 	    
 	}
 
